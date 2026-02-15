@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="38" fill="#04060c"/>
+  <rect x="12" y="12" width="168" height="168" rx="32" fill="#0b1430" stroke="#2a4a88"/>
+  <text x="22" y="80" fill="#f4f7ff" font-size="30" font-family="Segoe UI, Arial" font-weight="700">RQBBOX</text>
+  <text x="22" y="118" fill="#2ef08f" font-size="26" font-family="Segoe UI, Arial" font-weight="700">× RTECH</text>
+  <text x="22" y="152" fill="#9bc8ff" font-size="18" font-family="Segoe UI, Arial" font-weight="700">1.0</text>
+</svg>
