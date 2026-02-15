@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RQBBOX 1.0 | Console OS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="bootScreen" class="boot-screen">
+      <div class="boot-core">
+        <p class="cobrand">RQBBOX × RTECH</p>
+        <h1>RQBBOX <span>1.0</span></h1>
+        <p class="boot-copy">Powering RTECH gaming services...</p>
+        <div class="boot-bar"><span id="bootProgress"></span></div>
+        <p class="boot-status" id="bootStatus">Boot sequence: 0%</p>
+      </div>
+    </div>
+
+    <div id="authScreen" class="auth-screen hidden">
+      <div class="auth-card">
+        <p class="cobrand">RQBBOX × RTECH ID</p>
+        <h2>Console Access Portal</h2>
+        <p class="auth-subtitle">Sign in or create your RTECH player identity.</p>
+
+        <div class="auth-tabs">
+          <button id="loginTab" class="auth-tab active" type="button">Log In</button>
+          <button id="signupTab" class="auth-tab" type="button">Sign Up</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <input id="loginEmail" type="email" placeholder="RTECH Email" required />
+          <input id="loginPass" type="password" placeholder="Password" required />
+          <button type="submit">Enter RQBBOX</button>
+        </form>
+
+        <form id="signupForm" class="auth-form hidden">
+          <input id="signupUser" type="text" placeholder="Gamertag" required />
+          <input id="signupEmail" type="email" placeholder="RTECH Email" required />
+          <input id="signupPass" type="password" placeholder="Create Password" required />
+          <button type="submit">Create RTECH ID</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="appShell" class="app-shell hidden">
+      <aside class="sidebar">
+        <div class="brand">RQBBOX <span>1.0</span></div>
+        <p class="brand-sub">Powered by RTECH</p>
+        <nav id="mainNav">
+          <button class="nav-item active" data-view="home" type="button">Home</button>
+          <button class="nav-item" data-view="game pass" type="button">Game Pass</button>
+          <button class="nav-item" data-view="library" type="button">Library</button>
+          <button class="nav-item" data-view="store" type="button">Store</button>
+          <button class="nav-item" data-view="friends" type="button">Friends</button>
+          <button class="nav-item" data-view="settings" type="button">Settings</button>
+        </nav>
+        <div class="profile">
+          <h3 id="profileName">R TECH ID</h3>
+          <p id="profileMeta">Level 47 • Elite Squad</p>
+        </div>
+      </aside>
+
+      <main class="console-main">
+        <header class="topbar">
+          <div>
+            <p class="topbar__eyebrow">RQBBOX × RTECH CONSOLE</p>
+            <h1 id="dashboardTitle">Welcome back to RQBBOX</h1>
+          </div>
+          <div class="topbar__actions">
+            <button id="quickLaunch" type="button">Quick Launch</button>
+            <button id="partyUp" class="secondary" type="button">Party Up</button>
+          </div>
+        </header>
+
+        <section class="hero-card">
+          <div>
+            <p class="hero-tag">Featured Mission</p>
+            <h2>R TECH Chronicles: Eclipse Protocol</h2>
+            <p>
+              Drop into a cinematic campaign with adaptive haptics, smart triggers,
+              and cross-platform squads.
+            </p>
+            <div class="hero-buttons">
+              <button id="playNow" type="button">Play Now</button>
+              <button id="watchTrailer" class="secondary" type="button">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="hero-stats">
+            <div><span id="fps">0</span><label>FPS</label></div>
+            <div><span id="ping">0ms</span><label>Ping</label></div>
+            <div><span id="temp">0°C</span><label>GPU Temp</label></div>
+          </div>
+        </section>
+
+        <section class="tiles" id="tilesGrid">
+          <article class="tile green"><h3>Instant Resume</h3><p>Jump back into 4 suspended games in under 6 seconds.</p></article>
+          <article class="tile blue"><h3>Activity Cards</h3><p>Track quests, speedrun goals, and mission checkpoints live.</p></article>
+          <article class="tile purple"><h3>Cloud Arena</h3><p>Stream your session in 4K to mobile and browser instantly.</p></article>
+          <article class="tile orange"><h3>Squad Voice</h3><p>Spatial chat with noise filtering and tactical channel presets.</p></article>
+        </section>
+
+        <section class="queue-panel">
+          <h2>Up Next</h2>
+          <ul id="queueList"></ul>
+        </section>
+      </main>
+
+      <div id="toast" class="toast">Ready</div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
